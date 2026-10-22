@@ -286,3 +286,9 @@ replace k8s.io/sample-apiserver => k8s.io/sample-apiserver v0.33.5
 replace k8s.io/sample-cli-plugin => k8s.io/sample-cli-plugin v0.33.5
 
 replace k8s.io/sample-controller => k8s.io/sample-controller v0.33.5
+
+// Pin otelgrpc/otelhttp for k8s.io/cri-client@v0.33.5 which still uses
+// otelgrpc.UnaryClientInterceptor (removed in otelgrpc >= v0.59).
+replace go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc => go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.58.0
+
+replace go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp => go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.58.0
